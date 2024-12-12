@@ -22,4 +22,9 @@ class ProductController extends Controller
             "products" => $products,
         ]);
     }
+
+    public function create()
+    {
+        return view('pages.products.create');
+    }
 }
