@@ -24,6 +24,28 @@
                             <label for="name" class="form-label">Nama Produk</label>
                             <input type="text" name="name" id="name" class="form-control">
                         </div>
+                        <div class="form-group">
+                            <label for="description" class="form-label">Deskripsi</label>
+                            <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="sku" class="form-label">Kode Produk</label>
+                            <input type="text" name="sku" id="sku" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="price" class="form-label">Harga</label>
+                            <input type="number" inputmode="numeric" name="price" id="price" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="stock" class="form-label">Stok</label>
+                            <input type="number" inputmode="numeric" name="stock" id="stock" class="form-control">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-end">
+                            <a href="/products" class="btn btn-sm btn-outline-secondary mr-2">Batal</a>
+                            <button type="submit" class="btn btn-sm btn-primary">Simpan</button>
+                        </div>
                     </div>
                 </div>
             </form>
