@@ -40,6 +40,14 @@
                             <label for="stock" class="form-label">Stok</label>
                             <input type="number" inputmode="numeric" name="stock" id="stock" class="form-control">
                         </div>
+                        <div class="form-group">
+                            <label for="category_id" class="form-label">Kategori</label>
+                            <select name="category_id" id="category_id" class="form-control">
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <div class="d-flex justify-content-end">
