@@ -17,7 +17,9 @@
 @section('content')
     <div class="row">
         <div class="col">
-            <form action="/products/store">
+            <form action="/products/store" method="POST">
+                @csrf
+                @method('POST')
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group">
