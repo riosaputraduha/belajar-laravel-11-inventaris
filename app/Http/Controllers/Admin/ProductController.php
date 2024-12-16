@@ -32,7 +32,7 @@ class ProductController extends Controller
             "categories" => $categories,
         ]);
     }
-
+    
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -43,16 +43,36 @@ class ProductController extends Controller
             "category_id" => "required",
             "sku" => "required",
         ]);
+        
+        Product::create($validated);
+        
+        return redirect('/products');
+    }
 
-        Product::create([
-            "name" => $request->input('name'),
-            "price" => $request->input('price'),
-            "stock" => $request->input('stock'),
-            "description" => $request->input('description'),
-            "sku" => $request->input('sku'),
-            "category_id" => $request->input('category_id'),
+    public function edit($id)
+    {
+        $categories = Category::all();
+        $product = Product::findOrFail($id);
+
+        return view('pages.products.edit', [
+            "categories" => $categories,
+            "product" => $product,
         ]);
+    }
 
+    public function update(Request $request, $id)
+    {
+        $validated = $request->validate([
+            "name" => "required|min:3",
+            "description" => "nullable",
+            "price" => "required",
+            "stock" => "required",
+            "category_id" => "required",
+            "sku" => "required",
+        ]);
+        
+        Product::where('id', $id)->update($validated);
+        
         return redirect('/products');
     }
 
