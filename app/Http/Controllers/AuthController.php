@@ -9,11 +9,19 @@ class AuthController extends Controller
 {
     public function loginView()
     {
+        if (Auth::check()) {
+            return back();
+        }
+        
         return view('pages.auth.login');
     }
 
     public function login(Request $request)
     {
+        if (Auth::check()) {
+            return back();
+        }
+
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
