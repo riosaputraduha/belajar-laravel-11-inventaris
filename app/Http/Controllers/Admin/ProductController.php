@@ -17,7 +17,7 @@ class ProductController extends Controller
          * $products = DB::table('products')->get();
          * cara 2
          */
-        $products = Product::with('category')->get();
+        $products = Product::with('category')->paginate(10);
 
         return view('pages.products.index', [
             "products" => $products,
