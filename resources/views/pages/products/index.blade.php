@@ -7,7 +7,7 @@
         </div>
         <div class="col-sm-6">
             <ul class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item active"><a href="#">Beranda</a></li>
+                <li class="breadcrumb-item active"><a href="/">Beranda</a></li>
                 <li class="breadcrumb-item active">Produk</li>
             </ul>
         </div>
@@ -15,6 +15,15 @@
 @endsection
 
 @section('content')
+    @if (session('success'))
+    <script>
+        Swal.fire({
+            title: "Berhasil!",
+            text: "{{ session('success') }}",
+            icon: "success"
+        });
+    </script>
+    @endif
     <div class="row">
         <div class="col">
             <div class="card">

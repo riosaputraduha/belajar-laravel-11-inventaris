@@ -8,7 +8,7 @@
         </div>
         <div class="col-sm-6">
             <ul class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item active"><a href="#">Beranda</a></li>
+                <li class="breadcrumb-item active"><a href="/">Beranda</a></li>
             </ul>
         </div>
     </div>

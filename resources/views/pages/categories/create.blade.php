@@ -7,7 +7,7 @@
         </div>
         <div class="col-sm-6">
             <ul class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item active"><a href="#">Beranda</a></li>
+                <li class="breadcrumb-item active"><a href="/">Beranda</a></li>
                 <li class="breadcrumb-item active">Kategori</li>
             </ul>
         </div>
@@ -15,6 +15,15 @@
 @endsection
 
 @section('content')
+    @if ($errors->any())
+    <script>
+        Swal.fire({
+            title: 'Terjadi Kesalahan',
+            text: '@foreach($errors->all() as $error) {{ $error }} @endforeach',
+            icon: 'error'
+        })
+    </script>
+    @endif
     <div class="row">
         <div class="col">
             <form action="/categories/store" method="POST">
@@ -24,7 +33,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="name" class="form-label">Nama Kategori</label>
-                            <input type="text" name="name" id="name" class="form-control @error('name') is invalid @enderror" value="{{ old('name') }}">
+                            <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}">
                             @error('name')
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
