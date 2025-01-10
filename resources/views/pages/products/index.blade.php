@@ -61,14 +61,18 @@
                                             <a href="/products/edit/{{ $product->id }}" class="btn btn-sm btn-warning mr-2">
                                                 Ubah
                                             </a>
-                                            <form action="/products/{{ $product->id }}" method="POST">
+                                            {{-- <form action="/products/{{ $product->id }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
-                                            </form>
+                                            </form> --}}
+                                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-delete-{{ $product->id }}">
+                                                Hapus
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
+                                @include('pages.products.delete-confirm')
                             @endforeach
                         </tbody>
                     </table>

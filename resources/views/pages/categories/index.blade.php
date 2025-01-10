@@ -53,14 +53,18 @@
                                             <a href="/categories/edit/{{ $category->id }}" class="btn btn-sm btn-warning mr-2">
                                                 Ubah
                                             </a>
-                                            <form action="/categories/{{ $category->id }}" method="POST">
+                                            {{-- <form action="/categories/{{ $category->id }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
-                                            </form>
+                                            </form> --}}
+                                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-delete-{{ $category->id }}">
+                                                Hapus
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
+                                @include('pages.categories.delete-confirm')
                             @endforeach
                         </tbody>
                     </table>
