@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="{{ asset('templates/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="icon" href="{{ asset('templates/icons8-product-96.png') }}" type="image/png">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('templates/dist/css/adminlte.min.css') }}">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -41,9 +42,9 @@
     </section>
     <!-- /.content -->
 
-    <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+    {{-- <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
       <i class="fas fa-chevron-up"></i>
-    </a>
+    </a> --}}
   </div>
   <!-- /.content-wrapper -->
 
@@ -51,7 +52,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; {{ date('Y') }} <a href="#">Inven-App</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; {{ date('Y') }} <a href="#">19.3C.26 (R)</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->

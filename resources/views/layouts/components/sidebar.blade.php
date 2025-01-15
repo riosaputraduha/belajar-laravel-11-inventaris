@@ -22,7 +22,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="https://img.icons8.com/?size=100&id=IREgEXAbXHsf&format=png&color=ffffff" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"style="opacity: .8">
-      <span class="brand-text font-weight-light">Inven-App</span>
+      <span class="brand-text font-weight-light">Lite Inven</span>
     </a>
 
     <!-- Sidebar -->
