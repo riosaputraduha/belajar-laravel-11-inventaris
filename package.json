@@ -2,7 +2,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "composer install --no-dev && php artisan optimize && vite build",
+        "build": "vite build",
         "dev": "vite",
         "start": "echo \"No start script needed; served by Vercel PHP.\""
     },
