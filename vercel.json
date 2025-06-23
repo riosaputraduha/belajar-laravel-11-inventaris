@@ -1,18 +1,13 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "public" }
-    },
-    {
-      "src": "api/**/*.php",
-      "use": "@vercel/php"
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.7.3"
     }
-  ],
+  },
   "routes": [
     { "src": "/build/(.*)", "dest": "/build/$1" },
     { "src": "/(.*)",        "dest": "/api/index.php" }
-  ]
+  ],
+  "outputDirectory": "public"
 }

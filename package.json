@@ -3,9 +3,9 @@
     "type": "module",
     "scripts": {
         "build": "composer install --no-dev && php artisan optimize && vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "start": "echo \"No start script needed; served by Vercel PHP.\""
     },
-    "start": "echo \"This app is served by Vercel PHP, no start script needed.\"",
     "devDependencies": {
         "autoprefixer": "^10.4.20",
         "axios": "^1.7.4",
