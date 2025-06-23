@@ -13,8 +13,23 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::create([
-            "name" => "Elektronik",
-        ]);
+        $categories = [
+            "Elektronik",
+            "Furniture",
+            "Alat Tulis Kantor",
+            "Peralatan Kebersihan",
+            "Kendaraan",
+            "Peralatan Dapur",
+            "Alat Keselamatan",
+            "Perlengkapan Komputer",
+            "Dokumen Penting",
+            "Peralatan Proyek"
+        ];
+
+        foreach ($categories as $categoryName) {
+            Category::create([
+                "name" => $categoryName,
+            ]);
+        }
     }
 }
